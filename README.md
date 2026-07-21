@@ -19,6 +19,10 @@
 
 **GPT scores it. Claude audits it. Code arbitrates it. A human decides the hard 15%.**
 
+<br>
+
+**English** · [简体中文](README.zh.md)
+
 </div>
 
 ---
