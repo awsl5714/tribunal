@@ -1,0 +1,81 @@
+# Example rubric — a generalised, anonymised version of a real
+# education-assessment scoring scheme. Four mandatory projects (weighted) plus a
+# scored elective, a bonus pool, two qualification vetoes, and transmission caps.
+name: "capstone-review"
+pass_mark: 60.0
+bonus_cap: 15.0
+
+weights:
+  research: 0.30
+  team: 0.30
+  digital_resources: 0.10
+  development_report: 0.10
+  elective_exam: 0.20
+
+units:
+  # --- research (mandatory, 30%) ---------------------------------------
+  - { key: research.qualification, project: research, label: "Task qualification", max_score: 60, type: qualification }
+  - { key: research.topic_value,   project: research, label: "Topic value",        max_score: 15, transmission_cap: 0.0 }
+  - { key: research.process,       project: research, label: "Research process",   max_score: 10, transmission_cap: 0.0 }
+  - { key: research.outcome,       project: research, label: "Research outcome",   max_score: 15, transmission_cap: 0.0 }
+
+  # --- team (mandatory, 30%) -------------------------------------------
+  - { key: team.basic,        project: team, label: "Workshop basics",       max_score: 35, type: base_plus_tier }
+  - { key: team.activity,     project: team, label: "Professional activity", max_score: 10, transmission_cap: 5.9 }
+  - { key: team.members,      project: team, label: "Member completion",     max_score: 5,  transmission_cap: 2.9 }
+  - { key: team.host_demo,    project: team, label: "Host demonstration",    max_score: 10 }
+  - { key: team.growth,       project: team, label: "Team growth",           max_score: 10, transmission_cap: 5.9 }
+  - { key: team.radiation,    project: team, label: "Radiating influence",   max_score: 10 }
+  - { key: team.model,        project: team, label: "Model distillation",    max_score: 10, transmission_cap: 5.9 }
+  - { key: team.cultivation,  project: team, label: "Outcome cultivation",   max_score: 10, transmission_cap: 5.9 }
+
+  # --- digital resources (mandatory, 10%) ------------------------------
+  - { key: digital.publish, project: digital_resources, label: "Resource publication", max_score: 40 }
+  - { key: digital.quality, project: digital_resources, label: "Resource quality",     max_score: 60, type: base_plus_tier, transmission_cap: 30.0 }
+
+  # --- development report (mandatory, 10%) -----------------------------
+  - { key: report.content,   project: development_report, label: "Content quality",  max_score: 40 }
+  - { key: report.reflection, project: development_report, label: "Reflection/plan", max_score: 10, transmission_cap: 5.9 }
+  - { key: report.philosophy, project: development_report, label: "Philosophy",      max_score: 50, transmission_cap: 29.9 }
+
+  # --- elective exam (scored, 20%) — here: a journal paper -------------
+  - { key: elective.basic,   project: elective_exam, label: "Paper basics",     max_score: 50 }
+  - { key: elective.topic,   project: elective_exam, label: "Paper topic value", max_score: 15 }
+  - { key: elective.content, project: elective_exam, label: "Paper content",    max_score: 15 }
+  - { key: elective.publish, project: elective_exam, label: "Publication",      max_score: 20 }
+
+veto_rules:
+  - key: veto.research_qualification
+    project: research
+    description: "Research project must be owned by the candidate, at/above city level, within the training window."
+    conditions:
+      - "candidate is the project owner"
+      - "project is city-level or above"
+      - "project was filed or concluded within the training window"
+
+  - key: veto.authorship_role
+    project: elective_exam
+    description: "For journal/report/monograph electives the candidate must be first author / official presenter."
+    conditions:
+      - "candidate is first author (co-first with explicit marking counts; corresponding author does not)"
+
+transmission_rules:
+  - project: team
+    trigger_unit: team.basic
+    caps:
+      team.activity: 5.9
+      team.members: 2.9
+      team.growth: 5.9
+      team.model: 5.9
+      team.cultivation: 5.9
+
+  - project: digital_resources
+    trigger_unit: digital.publish
+    caps:
+      digital.quality: 30.0
+
+  - project: development_report
+    trigger_unit: report.content
+    caps:
+      report.reflection: 5.9
+      report.philosophy: 29.9

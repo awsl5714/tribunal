@@ -1,0 +1,48 @@
+{
+  "candidate_id": "SYN-001",
+  "candidate_name": "Synthetic Candidate A",
+  "elective_exam_project": "elective_exam",
+  "elective_bonus_projects": ["education_aid", "academic_report"],
+  "meta": { "training_window": "2023-01-01..2026-06-30" },
+  "gates": {
+    "veto.research_qualification": [false, "project owner"],
+    "veto.authorship_role": [false, "first author"]
+  },
+  "evidence": {
+    "research.qualification": [
+      { "source": "portfolio.pdf", "locator": "p.2-5", "excerpt": "City-level project, candidate listed as principal, filed 2024-03, within window.", "kind": "qualification" }
+    ],
+    "research.topic_value": [
+      { "source": "portfolio.pdf", "locator": "p.6-17", "excerpt": "Research question is timely and practically relevant." }
+    ],
+    "research.process": [
+      { "source": "portfolio.pdf", "locator": "p.6-17", "excerpt": "Mixed-methods design with survey and case analysis." }
+    ],
+    "research.outcome": [
+      { "source": "portfolio.pdf", "locator": "p.6-17", "excerpt": "Final report with actionable conclusions." }
+    ],
+    "team.basic": [
+      { "source": "portfolio.pdf", "locator": "p.18-30", "excerpt": "15-member workshop, clear charter and cadence." }
+    ],
+    "team.activity": [{ "source": "portfolio.pdf", "locator": "p.31-50", "excerpt": "Regular seminars and mentoring." }],
+    "team.members": [{ "source": "portfolio.pdf", "locator": "p.31-50", "excerpt": "Members meet publication/teaching quotas." }],
+    "team.host_demo": [{ "source": "portfolio.pdf", "locator": "p.51-73", "excerpt": "Multiple province/city-level talks per year." }],
+    "team.growth": [{ "source": "portfolio.pdf", "locator": "p.51-73", "excerpt": "Members promoted to city/district backbones." }],
+    "team.radiation": [{ "source": "portfolio.pdf", "locator": "p.51-73", "excerpt": "Cross-region mentoring, media coverage." }],
+    "team.model": [{ "source": "portfolio.pdf", "locator": "p.74-93", "excerpt": "Named four-in-one build model." }],
+    "team.cultivation": [{ "source": "portfolio.pdf", "locator": "p.74-93", "excerpt": "Provincial teaching-outcome award." }],
+    "digital.publish": [
+      { "source": "portfolio.pdf", "locator": "p.94-97", "excerpt": "12 cases on the provincial smart-education platform + local platform library.", "kind": "qualification" }
+    ],
+    "digital.quality": [{ "source": "portfolio.pdf", "locator": "p.94-97", "excerpt": "Diverse, reused resources." }],
+    "report.content": [{ "source": "portfolio.pdf", "locator": "p.98-112", "excerpt": "Full growth narrative across all dimensions." }],
+    "report.reflection": [{ "source": "portfolio.pdf", "locator": "p.98-112", "excerpt": "Concrete reflections and plan." }],
+    "report.philosophy": [{ "source": "portfolio.pdf", "locator": "p.98-112", "excerpt": "Systematic teaching philosophy with practice support." }],
+    "elective.basic": [
+      { "source": "portfolio.pdf", "locator": "p.113-120", "excerpt": "Journal paper, candidate is first author (byline p.113).", "kind": "qualification" }
+    ],
+    "elective.topic": [{ "source": "portfolio.pdf", "locator": "p.113-120", "excerpt": "Relevant, moderately novel topic." }],
+    "elective.content": [{ "source": "portfolio.pdf", "locator": "p.113-120", "excerpt": "Complete argument and conclusion." }],
+    "elective.publish": [{ "source": "portfolio.pdf", "locator": "p.113-120", "excerpt": "Published in a recognised professional journal." }]
+  }
+}

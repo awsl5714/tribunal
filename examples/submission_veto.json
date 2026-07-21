@@ -1,0 +1,40 @@
+{
+  "candidate_id": "SYN-002",
+  "candidate_name": "Synthetic Candidate B",
+  "elective_exam_project": "elective_exam",
+  "elective_bonus_projects": [],
+  "meta": { "training_window": "2023-01-01..2026-06-30" },
+  "gates": {
+    "veto.research_qualification": [true, "co-investigator (not owner)"],
+    "veto.authorship_role": [true, "corresponding author (not first author)"]
+  },
+  "evidence": {
+    "research.qualification": [
+      { "source": "portfolio.pdf", "locator": "p.2", "excerpt": "Filing lists a different principal investigator; candidate is a co-investigator.", "kind": "qualification" }
+    ],
+    "research.topic_value": [{ "source": "portfolio.pdf", "locator": "p.6", "excerpt": "Strong topic (but see qualification)." }],
+    "research.process": [{ "source": "portfolio.pdf", "locator": "p.6", "excerpt": "Thorough process." }],
+    "research.outcome": [{ "source": "portfolio.pdf", "locator": "p.6", "excerpt": "High-quality report." }],
+    "team.basic": [{ "source": "portfolio.pdf", "locator": "p.18", "excerpt": "Only a member roster; cannot confirm the workshop actually operated.", "kind": "qualification" }],
+    "team.activity": [{ "source": "portfolio.pdf", "locator": "p.20", "excerpt": "Sparse activity records." }],
+    "team.members": [{ "source": "portfolio.pdf", "locator": "p.20", "excerpt": "Some member work." }],
+    "team.host_demo": [{ "source": "portfolio.pdf", "locator": "p.22", "excerpt": "One district talk." }],
+    "team.growth": [{ "source": "portfolio.pdf", "locator": "p.22", "excerpt": "Limited growth evidence." }],
+    "team.radiation": [{ "source": "portfolio.pdf", "locator": "p.22", "excerpt": "Some outreach." }],
+    "team.model": [{ "source": "portfolio.pdf", "locator": "p.24", "excerpt": "Basic summary." }],
+    "team.cultivation": [{ "source": "portfolio.pdf", "locator": "p.24", "excerpt": "Basic outcomes." }],
+    "digital.publish": [
+      { "source": "portfolio.pdf", "locator": "p.30", "excerpt": "Local resource files only; no evidence of publication on a required platform.", "kind": "qualification" }
+    ],
+    "digital.quality": [{ "source": "portfolio.pdf", "locator": "p.30", "excerpt": "Reasonable content." }],
+    "report.content": [{ "source": "portfolio.pdf", "locator": "p.40", "excerpt": "Complete report." }],
+    "report.reflection": [{ "source": "portfolio.pdf", "locator": "p.40", "excerpt": "Some reflection." }],
+    "report.philosophy": [{ "source": "portfolio.pdf", "locator": "p.40", "excerpt": "Emerging philosophy." }],
+    "elective.basic": [
+      { "source": "portfolio.pdf", "locator": "p.50", "excerpt": "Paper byline shows candidate as corresponding author, not first author.", "kind": "qualification" }
+    ],
+    "elective.topic": [{ "source": "portfolio.pdf", "locator": "p.50", "excerpt": "Good topic." }],
+    "elective.content": [{ "source": "portfolio.pdf", "locator": "p.50", "excerpt": "Solid content." }],
+    "elective.publish": [{ "source": "portfolio.pdf", "locator": "p.50", "excerpt": "Published, but authorship role fails the gate." }]
+  }
+}

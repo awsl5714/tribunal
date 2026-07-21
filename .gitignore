@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# secrets — never commit API keys
+.env
+*.key
+
+# OS
+.DS_Store
+
+# real-world data (this repo ships only synthetic examples)
+data/private/
+*.xlsx
+!examples/**/*.xlsx
